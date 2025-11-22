@@ -1,0 +1,152 @@
+@font-face {
+  font-family: "WorkSans";
+  src: url("./fonts/WorkSans-Italic-VariableFont_wght.woff2") format("woff2");
+  font-weight: 200;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: "WorkSans";
+  src: url("./fonts/WorkSans-Bold.woff2") format("woff2");
+  font-weight: 600;
+}
+
+@font-face {
+  font-family: "WorkSans";
+  src: url("./fonts/WorkSans-Bold.woff2") format("woff2");
+  font-weight: 700;
+  font-style: bold;
+}
+
+body {
+  background: #fff1fc;
+  font-family: "WorkSans";
+  background-image: url("./images/background-pattern-desktop.svg");
+  background-repeat: no-repeat;
+  background-size: 100% auto;
+  background-attachment: fixed;
+  padding-top: 100px;
+}
+
+.faq-container {
+  max-width: 500px;
+  margin: 0 auto;
+  background: white;
+  border-radius: 12px;
+  padding: 0 40px 10px 40px;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+  position: relative;
+}
+
+.faq-header {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: -15px;
+}
+
+.faq-icon-header {
+  width: 32px;
+  height: 32px;
+}
+
+.faq-title {
+  font-size: 48px;
+  font-weight: 700;
+  color: #000;
+}
+
+.faq-item {
+  border-bottom: 1px solid #e0e0e0;
+  padding: 24px 0;
+}
+
+.faq-item:last-child {
+  border-bottom: none;
+}
+
+.faq-question {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  font-size: 16px;
+  color: #000000;
+  transition: 0.2s;
+  font-family: "WorkSans";
+  font-weight: 600;
+}
+
+.faq-question span {
+  text-align: left;
+  max-width: calc(100% - 50px);
+}
+
+.faq-question:hover {
+  color: #9f5adb;
+}
+
+.faq-icon {
+  position: relative;
+  width: 32px;
+  height: 32px;
+}
+
+.icon-plus,
+.icon-minus {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  transition: 0.5s;
+}
+
+.icon-minus {
+  opacity: 0;
+  transform: rotate(135deg);
+  transform-origin: center;
+}
+
+.faq-item.open .icon-plus {
+  opacity: 0;
+}
+
+.faq-item.open .icon-minus {
+  opacity: 1;
+
+}
+
+.faq-answer {
+  max-height: 0;
+  overflow: hidden;
+  opacity: 0;
+  transition: 0.4s;
+  color: #666;
+  line-height: 1.6;
+  font-size: 14px;
+  font-family: "WorkSans";
+  font-weight: 200;
+  font-style: italic;
+}
+
+.faq-item.open .faq-answer {
+  max-height: 100px;
+  opacity: 1;
+}
+
+.faq-item.open .faq-icon {
+  transform: rotate(45deg);
+}
+
+@media (max-width: 500px) {
+  body {
+    background-image: url("./images/background-pattern-mobile.svg");
+    background-size: 100% auto;
+  }
+}
