@@ -147,5 +147,8 @@ body {
     background-image: url("background-pattern-mobile.svg");
     background-size: 100% auto;
   }
+  background-image {
+    width: 100%;
 }
+
 
